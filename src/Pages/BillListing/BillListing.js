@@ -25,9 +25,12 @@ export default function BillListing() {
   return (
     <div className="table-container">
       <div>
+        <label className="total-bills">Total Bills : {allBills?.length}</label>
         {allBills?.length > 0 ? (
-          <table>
-            <thead>
+          <table
+            style={{ display: "block", height: "600px", overflow: "auto" }}
+          >
+            <thead style={{ position: "sticky", top: "0" }}>
               <tr>
                 <th>Bill Date</th>
                 <th>Paid Date</th>
